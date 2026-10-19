@@ -1,0 +1,359 @@
+/* Fonte principal do portfólio */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Fonte dos títulos */
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Organização dos certificados */
+.lista-certificados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.lista-certificados img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Certificados em telas pequenas */
+@media (max-width: 600px) {
+    .lista-certificados {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== VISUAL GERAL ===== */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    color: #26354a;
+    background: #f7f9fc;
+    line-height: 1.7;
+}
+
+/* ===== CABEÇALHO E MENU ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 16px 6%;
+    background: #ffffff;
+    box-shadow: 0 3px 18px rgba(40, 60, 90, 0.07);
+}
+
+.foto-perfil {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #d9e8f5;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 700;
+    color: #356b91;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 10px;
+    color: #35445a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #eaf3fa;
+    color: #356b91;
+}
+
+/* ===== PÁGINA INICIAL ===== */
+main {
+    width: 100%;
+}
+
+#inicio {
+    box-sizing: border-box;
+    min-height: 75vh;
+    padding: 70px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    background: linear-gradient(135deg, #f2f7fc, #ffffff);
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 720px;
+}
+
+.subtitulo {
+    color: #528a78;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+    color: #263d58;
+}
+
+h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    margin: 12px 0 20px;
+}
+
+h1 span {
+    color: #548d7a;
+}
+
+.descricao {
+    max-width: 560px;
+    color: #637084;
+    font-size: 16px;
+}
+
+/* ===== BOTÕES SEPARADOS ===== */
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    min-height: 24px;
+    border: 1px solid #d5e3ed;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #356b91;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(40, 60, 90, 0.05);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    background: #edf5fa;
+}
+
+.botao.principal {
+    background: #356b91;
+    border-color: #356b91;
+    color: #ffffff;
+}
+
+/* ===== ABAS SOBRE, PROJETOS E CERTIFICADOS ===== */
+.secao {
+    box-sizing: border-box;
+    width: min(100% - 40px, 900px);
+    min-height: 60vh;
+    margin: 45px auto;
+    padding: clamp(24px, 5vw, 48px);
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(40, 60, 90, 0.06);
+}
+
+.secao h2 {
+    font-size: clamp(30px, 5vw, 40px);
+    margin: 8px 0 20px;
+}
+
+.secao p {
+    color: #637084;
+}
+
+/* ===== CERTIFICADOS ===== */
+.lista-certificados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin-top: 28px;
+}
+
+.lista-certificados img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+    background: #f8fafc;
+    border: 1px solid #e8edf3;
+    border-radius: 12px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    padding: 24px;
+    text-align: center;
+    color: #7a8797;
+    font-size: 13px;
+}
+
+/* ===== CELULARES ===== */
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        gap: 12px;
+        padding: 14px 12px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    #inicio {
+        min-height: 65vh;
+        padding: 45px 24px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botao {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .secao {
+        width: calc(100% - 28px);
+        margin: 24px auto;
+        padding: 24px 20px;
+    }
+
+    .lista-certificados {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-certificados img {
+        max-height: 300px;
+    }
+}
+main section[hidden] {
+    display: none !important;
+}
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+/* Cartão do projeto */
+.projeto {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    margin: 25px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.projeto h3 {
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.projeto p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botão profissional */
+.projeto a {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projeto a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+/* Botão do projeto Minha Rotina de Estudos */
+.projeto a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 26px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+}
+
+.projeto a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}

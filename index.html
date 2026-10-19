@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Beatriz Lorraine</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="minha foto.jpeg"
+             alt="Foto de Beatriz Lorraine"
+             class="foto-perfil">
+
+        <a href="#" class="logo"
+           onclick="mostrarAba('inicio'); return false;">BL.</a>
+
+        <nav>
+            <a href="#" onclick="mostrarAba('inicio'); return false;">Início</a>
+            <a href="#" onclick="mostrarAba('sobre'); return false;">Sobre</a>
+            <a href="#" onclick="mostrarAba('projetos'); return false;">Projetos</a>
+            <a href="#" onclick="mostrarAba('certificados'); return false;">Cert
+           ificados</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="inicio" id="inicio">
+
+            <div class="conteudo">
+                <p class="subtitulo">MEU PORTFÓLIO PESSOAL</p>
+
+                <h1>Beatriz <span>Lorraine</span></h1>
+
+                <p class="descricao">
+                    Olá! Este é meu portfólio, e aqui você irá encontrar
+                    um pouco sobre mim, meus projetos e meus certificados.
+                </p>
+
+                <div class="botoes">
+                    <a href="#" class="botao principal"
+                       onclick="mostrarAba('sobre'); return false;">
+                        Sobre mim
+                    </a>
+
+                    <a href="#" class="botao"
+                       onclick="mostrarAba('projetos'); return false;">
+                        Meus projetos
+                    </a>
+
+                    <a href="#" class="botao"
+                       onclick="mostrarAba('certificados'); return false;">
+                        Meus certificados
+                    </a>
+                </div>
+            </div>
+
+            <div class="foto-container">
+                <!-- Mantido para preservar a estrutura do seu layout -->
+            </div>
+
+            <div class="decoracao">
+                <div class="circulo">
+                    <span>BL</span>
+                </div>
+                <div class="detalhe detalhe-1"></div>
+                <div class="detalhe detalhe-2"></div>
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+        <!-- SOBRE MIM -->
+<section class="secao" id="sobre" hidden>
+
+    <h2>Sobre mim</h2>
+
+    <p>
+        Meu nome é Beatriz Lorraine, sou estudante do 3º ano
+        do Ensino Médio.
+    </p>
+
+    <p>
+        Atualmente, participo do Programa Trilhas, na área
+        de Desenvolvimento Front-End.
+    </p>
+
+    <p>
+        Sou uma pessoa que busca aprender coisas novas,
+        superar desafios e crescer cada vez mais.
+    </p>
+
+    <p>
+        Meu objetivo é me desenvolver na área da programação,
+        construir projetos e adquirir novos conhecimentos.
+    </p>
+
+    <p>
+        Este portfólio representa um pouco da minha trajetória
+        e dos meus aprendizados.
+    </p>
+
+</section>
+        <!-- PROJETOS -->
+
+<section class="secao" id="projetos" hidden>
+
+    <p class="subtitulo">O QUE ESTOU CRIANDO</p>
+
+    <h2>Meus projetos</h2>
+
+    <p>
+        Aqui apresento meus projetos e mostro um pouco
+        do que estou aprendendo durante o curso.
+    </p>
+<!-- PROJETO: MINHA ROTINA DE ESTUDOS -->
+<div class="projeto">
+    <h3>Minha Rotina de Estudos</h3>
+    <p>Projeto desenvolvido com HTML, CSS e JavaScript para organizar tarefas e estudos.</p>
+    <a href="minha-rotina-de-estudos/index.html" target="_blank">
+        Ver projeto
+    </a>
+</div>
+
+</section>
+
+        <!-- CERTIFICADOS -->
+        <section class="secao" id="certificados" hidden>
+            <p class="subtitulo">MINHA APRENDIZAGEM</p>
+            <h2>Meus certificados</h2>
+
+            <p>
+                Aqui estão alguns dos certificados e conquistas
+                que fazem parte da minha trajetória de aprendizagem.
+            </p>
+
+            <div class="lista-certificados">
+                <img src="meus certificados/CERTIFICADO.jpeg"
+                     alt="Meu certificado">
+
+                <img src="meus certificados/OBA.jpeg"
+                     alt="Certificado da OBA">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Beatriz Lorraine © 2026</p>
+    </footer>
+
+
+    <script>
+function mostrarAba(id) {
+    const secoes = document.querySelectorAll('main section');
+    const abaEscolhida = document.getElementById(id);
+
+    if (!abaEscolhida) {
+        return;
+    }
+
+    secoes.forEach(function(secao) {
+        secao.hidden = true;
+    });
+
+    abaEscolhida.hidden = false;
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+mostrarAba('inicio');
+    </script>
+
+</body>
+</html> git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@beatrizlorraineferroinacio@g.com"
